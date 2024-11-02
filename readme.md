@@ -56,6 +56,7 @@
 |6|Даниил Турич||||||||||
 |7|Влад Рудь||||||||||
 |8|Денис Шарубнёв|[ii02625](./trunk/ii02625/)|:white_check_mark:|:white_check_mark:||||||||
+<<<<<<< Updated upstream
 |9|Владислав Суховило ||||||||||
 |10|Катя Шоева||||||||||
 <<<<<<< Updated upstream
@@ -64,6 +65,14 @@
 |11|Илья Хомиченко|[ii02621](./trunk/ii02621/)|:white_check_mark:||:white_check_mark:|||||||
 >>>>>>> Stashed changes
 |12|Настя Черноиван||||||||||
+=======
+|9|Владислав Суховило ||:white_check_mark:|:white_check_mark:|||||||
+|10|Катя Шоева|[ii230326](./trunk/ii230326/)|:white_check_mark:|:white_check_mark:|||||||
+|11|Илья Хомиченко|[ii02621](./trunk/ii02621/)|:white_check_mark:||:white_check_mark:|||||||
+|12|Настя Черноиван|[ii230324](./trunk/ii230324/)|:white_check_mark:|:white_check_mark:||:white_check_mark:|||||
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 |13|Алексей Хитренко||||||||||
 |14|Вирко Егор||||||||||
 |15|Данилюк Тимофей|[ii02602](./trunk/ii02602/)|:white_check_mark:|:white_check_mark:||||||||
