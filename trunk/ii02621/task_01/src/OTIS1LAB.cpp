@@ -1,32 +1,28 @@
 ﻿#include <iostream>
 #include <cmath> 
 using namespace std;
-
-// Линейная модель: y(t+1) = a * y(t) + b * u(t)
-void simulateLinearModel(double A, double B, double y0, double u0, int steps) {
+void simulateLine(double A, double B, double y0, double u0, int st) {
     double y = y0; 
     double u = u0; 
 
     cout << "Линейная модель:\n";
-    for (int t = 0; t < steps; ++t) {
-        double y_next = A * y + B * u;
-        cout << "Шаг времени " << t << ": Температура = " << y_next << endl;
-        y = y_next; 
+    for (int t = 0; t < st; ++t) {
+        double y_n = A * y + B * u;
+        cout << "Шаг времени " << t << ": Температура = " << y_n << endl;
+        y = y_n; 
     }
 }
-
-// Нелинейная модель: y(t+1) = A * y(t) - B * y^2(t-1) + C * u(t) + D * sin(u(t))
-void simulateNonlinearModel(double A, double B, double C, double D, double y0, double u0, int steps) {
-    double y_prev = y0; 
+void simulate(double A, double B, double C, double D, double y0, double u0, int step) {
+    double y_p = y0; 
     double y = y0;
     double u = u0; 
 
     cout << "\nНелинейная модель:\n";
-    for (int t = 0; t < steps; ++t) {
-        double y_next = A * y - B * y_prev * y_prev + C * u + D * sin(u);
-        cout << "Шаг времени " << t << ": Температура = " << y_next << endl;
-        y_prev = y; 
-        y = y_next; 
+    for (int t = 0; t < step; ++t) {
+        double y_n = A * y - B * y_p * y_p + C * u + D * sin(u);
+        cout << "Шаг времени " << t << ": Температура = " << y_n << endl;
+        y = y_n; 
+        y_p = y;
     }
 }
 
@@ -34,8 +30,8 @@ int main() {
     setlocale(LC_ALL, "Russian");
     
     double A, B, C, D;
-    double i_temperature, i_input;
-    int steps;
+    double i_t, i_in;
+    int s;
 
   
     cout << "Введите значение параметра a: ";
@@ -51,14 +47,14 @@ int main() {
     cin >> D;
 
     cout << "Введите начальное значение температуры y0: ";
-    cin >> i_temperature;
+    cin >> i_t;
 
     cout << "Введите начальное значение управляющего сигнала u0: ";
-    cin >> i_input;
+    cin >> i_in;
     cout << "Введите количество шагов моделирования: ";
-    cin >> steps;
-    simulateLinearModel(A, B, i_temperature, i_input, steps);
-    simulateNonlinearModel(A, B, C, D, i_temperature, i_input, steps);
+    cin >> s;
+    simulateLine(A, B, i_t, i_in, s);
+    simulate(A, B, C, D, i_t, i_in, s);
 
     return 0;
 }
