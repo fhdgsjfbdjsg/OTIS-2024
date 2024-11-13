@@ -30,15 +30,17 @@
 
 # Выполнение #
 
-Установив Docker, и установив по руководству проект NIKA, а затем и запустив, я приобрел некоторый опыт работы с этим проектом. Вот несколько кадров, снятые во время экспериментов в процессе работы с этим проектом.
+Установив Docker, и установив по руководству проект NIKA, а затем и запустив, я приобрел некоторый опыт работы с этим проектом. 
 
-Installation:
+Установка:
 ```
 git clone -c core.longpaths=true -c core.autocrlf=true https://github.com/ostis-apps/nika
 cd nika
 git submodule update --init --recursive
 docker compose pull
 ```
+Необходимо дополнительно установить [Docker](https://docs.docker.com/)(c плагином Compose)
+
 Запуск:
 ```
 docker compose up --no-build
@@ -47,7 +49,9 @@ docker compose up --no-build
 
 sc-web: ```localhost:8000```
 
-Веб-диалог пользовательского интерфейса: ```localhost:3033```
+dialogue web UI - ```localhost:3033```
+
+# Результат #
 
 sc-web:
 
@@ -56,7 +60,7 @@ sc-web:
 ![task046.png](task046.png)
 
 
-Web-диалог пользовательского интерфейса: 
+dialogue web UI - ```localhost:3033```: 
 
 ![task042.png](task042.png)
 ![task044.png](task044.png)
